@@ -8,7 +8,7 @@ class SubjectAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-class ModuleInLine(admin.StackedInline):
+class ModuleInline(admin.StackedInline):
     model = Module
 
 
@@ -18,4 +18,4 @@ class CourseAdmin(admin.ModelAdmin):
     list_filter = ['created', 'subject']
     search_fields = ['title', 'overview']
     prepopulated_fields = {'slug': ('title',)}
-    inlines = [ModuleInLine]
+    inlines = [ModuleInline]
